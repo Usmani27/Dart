@@ -19,9 +19,8 @@ void mainFunction(List<String> names) {
     print(names);
   } else if (option == '2') {
     printList(names);
-  } else {
-    return;
-  }
+  } else
+    exit(0);
 }
 
 void addList(List<String> names) {
