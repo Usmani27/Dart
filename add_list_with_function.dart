@@ -11,11 +11,9 @@ void main(List<String> args) {
     String option = stdin.readLineSync()!;
     if (option == '1') {
       addList(names);
+      print(names);
     } else if (option == '2') {
-      int sno = 1;
-      for (String name in names) {
-        print("Serial No.: ${sno++} Name: $name");
-      }
+      printList(names);
     } else {
       return;
     }
@@ -26,4 +24,11 @@ void addList(List<String> names) {
   print('Please enter your name');
   String yourName = stdin.readLineSync()!;
   names.add(yourName);
+}
+
+void printList(names) {
+  int sno = 1;
+  for (String name in names) {
+    print("Serial No.: ${sno++} Name: $name");
+  }
 }
