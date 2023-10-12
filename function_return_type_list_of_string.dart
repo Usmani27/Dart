@@ -1,4 +1,5 @@
 void main(List<String> args) {
+  //print(specialFriends(['Amir', 'Waseem', 'Waqar']));
   var bestFriends = specialFriends(['Amir', 'Waseem', 'Waqar']);
   print(bestFriends);
 }
