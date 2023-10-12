@@ -19,9 +19,9 @@ void main(List<String> args) {
   }
 }
 
-List<String> specialFriends(List<String> allFriends) {
+List<String> specialFriends(listOfNames) {
   List<String> finalFriends = [];
-  for (String friendName in allFriends) {
+  for (String friendName in listOfNames) {
     if (friendName == 'Amir' || friendName == 'Waqar') {
       finalFriends.add(friendName);
     }
