@@ -1,7 +1,20 @@
 void main(List<String> args) {
-  //print(specialFriends(['Amir', 'Waseem', 'Waqar']));
   var bestFriends = specialFriends(['Amir', 'Waseem', 'Waqar']);
   print(bestFriends);
+
+  for (String friend2 in bestFriends) {
+    if (friend2 == 'Waseem') {
+      print("Waseem is my best friend");
+    } else {
+      print("Waseem not found");
+    }
+  }
+
+  for (String friend3 in bestFriends) {
+    if (friend3 == 'Waqar') {
+      print("$friend3 is my best friend");
+    }
+  }
 }
 
 List<String> specialFriends(List<String> allFriends) {
