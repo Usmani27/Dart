@@ -8,6 +8,7 @@ void main(List<String> args) {
     } else {
       print("Waseem not found");
     }
+    break;
   }
 
   for (String friend3 in bestFriends) {
