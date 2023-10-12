@@ -1,5 +1,6 @@
 void main(List<String> args) {
-  var bestFriends = specialFriends(['Amir', 'Waseem', 'Waqar']);
+  List<String> listOfNames = ['Amir', 'Waseem', 'Waqar'];
+  var bestFriends = specialFriends(listOfNames);
   print(bestFriends);
 
   for (String friend2 in bestFriends) {
