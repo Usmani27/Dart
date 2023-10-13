@@ -1,5 +1,5 @@
 void main(List<String> args) {
-  Function copySignature = functionSignature;
+  var copySignature = functionSignature;
   bool functionSignatureAssigned = copySignature();
   print(functionSignatureAssigned);
 }
