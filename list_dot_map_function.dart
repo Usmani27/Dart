@@ -8,15 +8,10 @@ void main(List<String> args) {
   }
   print("*****************");
 
-  //foods.map((e) => null);
-  foods.map((e) => e[0]);
-  print(foods.map((e) => e[0]));
-
-  //foods.forEach((element) {});
-  // foods.forEach(for_each_food);
+  List<String> firstCharacterOfEveryFood = foods.map(returnFirstIndex).toList();
+  print(firstCharacterOfEveryFood);
 }
 
-
-// void for_each_food(String food) {
-//   print("The food from the for each fucntion $food");
-// }
+String returnFirstIndex(food) {
+  return food[0];
+}
