@@ -9,4 +9,9 @@ void main(List<String> args) {
       ((int a, int b) => a + b); //Fat arrow => function; arrown instead of {}
 
   print(sum2(10, 20));
+
+  List<String> friends = ["Amir", "Fawad", "Ahmed"];
+  friends.forEach((friends) {
+    print(friends);
+  });
 }
