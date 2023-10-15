@@ -2,6 +2,13 @@ void main(List<String> args) {
   print(contditionalReturnValue(-1));
 
   print(contditionalReturnValue(1));
+
+  print("**Anonymous Function as Fat Arrow Function**");
+  var sum = ((int a, int b) => a + b);
+  print(sum(10, 5));
+  //  var sum = ((int a, int b) {
+  //   return a + b;
+  // });
 }
 
 bool contditionalReturnValue(int conditionalParameter) =>
