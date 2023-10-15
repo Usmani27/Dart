@@ -1,4 +1,14 @@
 void main(List<String> args) {
+  print("**lis.map(){} function as Fart Arrow Function**");
+
+  List<String> cars = ["Toyota", "Suzuki", "Audi"];
+
+  print(cars.map((car) => "This is return value of the list cars: $car"));
+
+  // print(cars.map((car) {
+  //   return "This is return value of the list cars: $car";
+  // }));
+
   print(contditionalReturnValue(-1));
 
   print(contditionalReturnValue(1));
