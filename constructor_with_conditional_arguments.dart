@@ -13,9 +13,9 @@ class Contacts {
 
   Contacts(this.name, {this.address = "", this.email = ""}) {
     if (!email.contains("@")) {
-      print("You have entered an incorrect email address");
+      print("You have entered an incorrect email address $email");
     } else {
-      print("Your email address is correct");
+      print("Your email address is correct $email");
     }
   }
 }
