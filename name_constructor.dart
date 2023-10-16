@@ -3,6 +3,7 @@ void main(List<String> args) {
 
   Cars bus = Cars.engine(engineCC: "10000");
   print(bus.engineCC);
+  print(bus.carName);
 
   print("***First Default Instance***");
   Cars toyota = Cars(carName: "Corrolla");
