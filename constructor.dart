@@ -11,10 +11,12 @@ void main(List<String> args) {
 
 class Cars {
   String carBrand = '';
+  String engineCC = "2000";
 
-  Cars({this.carBrand = "Model Name"}) {}
+  Cars({this.carBrand = "Model Name", this.engineCC = "5000"}) {}
 
   engine() {
-    print("The engine is automatic $carBrand");
+    print("The name of the car is $carBrand");
+    print("The engine size of the car is $engineCC");
   }
 }
