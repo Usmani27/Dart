@@ -11,9 +11,9 @@ void main(List<String> args) {
 
 class Cars {
   String carBrand = '';
-  String engineCC = "2000";
+  String engineCC = "";
 
-  Cars({this.carBrand = "Model Name", this.engineCC = "5000"}) {}
+  Cars({this.carBrand = "Model Name", this.engineCC = ""}) {}
 
   engine() {
     print("The name of the car is $carBrand");
