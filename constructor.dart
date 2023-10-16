@@ -12,7 +12,7 @@ void main(List<String> args) {
 class Cars {
   String carBrand = '';
 
-  Cars({carBrand = "Model Name"}) {
+  Cars({String carBrand = "Model Name"}) {
     carBrand = carBrand;
   }
 
