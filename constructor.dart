@@ -5,7 +5,7 @@ void main(List<String> args) {
   toyota.engine();
   print("*Constructor with same parameter and variable name with Argment*");
   Cars honda = Cars();
-  print(toyota.carBrand);
+  print(honda.carBrand);
   honda.engine();
 }
 
@@ -13,7 +13,7 @@ class Cars {
   String carBrand = '';
 
   Cars({String carBrand = "Model Name"}) {
-    carBrand = carBrand;
+    this.carBrand = carBrand;
   }
 
   engine() {
