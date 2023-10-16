@@ -1,6 +1,6 @@
 void main(List<String> args) {
   print("*****Constructor With Default Optional Positional Parameter*****");
-  Cars toyota = Cars();
+  Cars toyota = Cars("Corrola");
   // toyota.carBrand = "Corrola";
   //toyota.companyName = "Toyota";
   print(toyota.carBrand);
@@ -17,7 +17,7 @@ class Cars {
   String carBrand = 'Motor Car';
   String companyName = "Motor Company";
 
-  Cars([String brandName = "Model Name", String company = "Car Company"]) {
+  Cars(String company, [String brandName = "Model Name"]) {
     carBrand = brandName;
     companyName = company;
   }
