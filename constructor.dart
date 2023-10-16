@@ -1,12 +1,12 @@
 void main(List<String> args) {
   print("*****Constructor With Default Optional Positional Parameter*****");
-  Cars toyota = Cars("Corrola");
+  Cars toyota = Cars();
   // toyota.carBrand = "Corrola";
   //toyota.companyName = "Toyota";
   print(toyota.carBrand);
   toyota.engine();
   print("*****Consturctor With Optional Positional Parameter*****");
-  Cars honda = Cars("Civic", "Honda");
+  Cars honda = Cars();
   //honda.carBrand = "Civic";
   // honda.companyName = "Honda";
   print("${honda.carBrand} is the car name");
@@ -17,7 +17,7 @@ class Cars {
   String carBrand = 'Motor Car';
   String companyName = "Motor Company";
 
-  Cars(String company, [String brandName = "Model Name"]) {
+  Cars({String brandName = "Model Name", String company = "Company Name"}) {
     carBrand = brandName;
     companyName = company;
   }
