@@ -1,5 +1,6 @@
 void main(List<String> args) {
-  Contacts contact = Contacts("Kaashaann", address: "Gulshan", email: "email");
+  Contacts contact =
+      Contacts("Kaashaann", address: "Gulshan", email: "email@email.com");
   print(contact.name);
   print(contact.address);
   print(contact.email);
