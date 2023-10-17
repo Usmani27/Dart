@@ -13,6 +13,7 @@ void main(List<String> args) {
   );
   print(student2.name);
   print(student2.contact);
+  Student.country = "Hungry";
   print(Student.country);
 }
 
@@ -20,12 +21,12 @@ class Student {
   String name = "";
 
   String contact = "";
-  static String country = "USA";
+  static String country = "";
 
   Student({
     this.name = "",
     this.contact = "",
   }) {
-    //country = "Pakistan";
+    country = "Pakistan";
   }
 }
