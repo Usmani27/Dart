@@ -20,12 +20,12 @@ class Student {
   String name = "";
 
   String contact = "";
-  static String country = "";
+  static String country = "USA";
 
   Student({
     this.name = "",
     this.contact = "",
   }) {
-    country = "Pakistan";
+    //country = "Pakistan";
   }
 }
