@@ -16,22 +16,25 @@ void main(List<String> args) {
   Student.country = "Hungry";
   print(Student.country);
 
-  Student.staticFunction("Iran");
+  Student.staticFunction("");
 }
 
 class Student {
   String name = "";
   String contact = "";
-  static String country = "World";
+  static String country = "Pakistan";
 
   Student({
     this.name = "",
     this.contact = "",
   }) {}
 
-  static staticFunction(String countryName) {
-    country = countryName;
-    print("$countryName function name");
-    print("$country default name from function");
+  static staticFunction(String country) {
+    if (country == "") {
+      print("You have not selected any country");
+      print("The default country is Pakistan");
+    }
+    Student.country = country;
+    print(Student.country);
   }
 }
