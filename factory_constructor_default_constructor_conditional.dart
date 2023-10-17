@@ -19,7 +19,7 @@ class Contacts {
   String address = "World";
   String email = "mail";
 
-  Contacts({this.name = "", this.address = "", this.email = ""}) {
+  Contacts({this.name = "", this.address = "Address", this.email = ""}) {
     if (!email.contains("@")) {
       print("You have entered an incorrect email address $email");
     } else {
