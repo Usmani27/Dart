@@ -16,7 +16,7 @@ void main(List<String> args) {
   Student.country = "Hungry";
   print(Student.country);
 
-  Student.staticFunction("");
+  Student.staticFunction("Russia");
 }
 
 class Student {
