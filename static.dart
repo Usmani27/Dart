@@ -15,13 +15,15 @@ void main(List<String> args) {
   print(student2.contact);
   Student.country = "Hungry";
   print(Student.country);
+  student.staticFunction();
+  Student.staticFunction();
 }
 
 class Student {
   String name = "";
 
   String contact = "";
-  static String country = "";
+  static String country = "World";
 
   Student({
     this.name = "",
@@ -29,4 +31,6 @@ class Student {
   }) {
     country = "Pakistan";
   }
+
+  static staticFunction() {}
 }
