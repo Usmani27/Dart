@@ -15,22 +15,23 @@ void main(List<String> args) {
   print(student2.contact);
   Student.country = "Hungry";
   print(Student.country);
-  student.staticFunction();
-  Student.staticFunction();
+
+  Student.staticFunction("Iran");
 }
 
 class Student {
   String name = "";
-
   String contact = "";
   static String country = "World";
 
   Student({
     this.name = "",
     this.contact = "",
-  }) {
-    country = "Pakistan";
-  }
+  }) {}
 
-  static staticFunction() {}
+  static staticFunction(String countryName) {
+    country = countryName;
+    print("$countryName function name");
+    print("$country default name from function");
+  }
 }
