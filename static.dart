@@ -13,7 +13,7 @@ void main(List<String> args) {
   );
   print(student2.name);
   print(student2.contact);
-  print(student2.country);
+  print(Student.country);
 }
 
 class Student {
