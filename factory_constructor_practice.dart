@@ -1,36 +1,54 @@
 void main() {
-  final person1 = Person('John');
-  final person2 = Person('Harry');
-  final person3 = Person('John');
-
-  // hashcode of person1 and person3 are same
-  print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
-  print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
-  print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
+  Singleton obj1 = Singleton();
+  Singleton obj2 = Singleton();
+  print(obj1.hashCode);
+  print(obj2.hashCode);
 }
 
-class Person {
-  // final fields
-  final String name;
+class Singleton {
+  // static variable
+  static final Singleton _instance = Singleton._internal();
 
-  // private constructor
-  Person._internal(this.name);
-
-  // static _cache field
-  static final Map<String, Person> _cache = <String, Person>{};
-
-  // factory constructor
-  factory Person(String name) {
-    if (_cache.containsKey(name)) {
-      return _cache[name]!;
-    } else {
-      final person = Person._internal(name);
-      _cache[name] = person;
-      return person;
-    }
+// factory constructor
+  factory Singleton() {
+    return _instance;
   }
+  // private constructor
+  Singleton._internal();
 }
 
+// void main() {
+//   final person1 = Person('John');
+//   final person2 = Person('Harry');
+//   final person3 = Person('John');
+
+//   // hashcode of person1 and person3 are same
+//   print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
+//   print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
+//   print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
+// }
+
+// class Person {
+//   // final fields
+//   final String name;
+
+//   // private constructor
+//   Person._internal(this.name);
+
+//   // static _cache field
+//   static final Map<String, Person> _cache = <String, Person>{};
+
+//   // factory constructor
+//   factory Person(String name) {
+//     if (_cache.containsKey(name)) {
+//       return _cache[name]!;
+//     } else {
+//       final person = Person._internal(name);
+//       _cache[name] = person;
+//       return person;
+//     }
+//   }
+// }
 
 // void main() {
 //   // create Shape object
@@ -75,7 +93,6 @@ class Person {
 //     print('Drawing rectangle');
 //   }
 // }
-
 
 //This the 3rd Example
 // void main() {
