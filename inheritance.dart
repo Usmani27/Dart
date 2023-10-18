@@ -28,4 +28,9 @@ class Men extends Human {
       : super(name: manName, age: manAge) {
     print("Hello from the Men");
   }
+  @override
+  dayWork() {
+    // TODO: implement dayWork
+    return super.dayWork();
+  }
 }
