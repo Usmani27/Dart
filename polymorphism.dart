@@ -8,10 +8,11 @@ void main(List<String> args) {
   print(men.age);
   print(men.name);
   print("***Class as Type instance as Parameter and Argument***");
-  dayJob(men); //men instance as an argument
+  Women women = Women("She", "Nice Girl", 25);
+  dayJob(women); //men instance as an argument
 }
 
-dayJob(Men instanceAsParameter) {
+dayJob(Human instanceAsParameter) {
   instanceAsParameter.dayWork();
 }
 
@@ -29,7 +30,7 @@ class Human {
 }
 
 class Men extends Human {
-  String gender = "";
+  String gender = "Male Default";
 
   Men(this.gender, String manName, int manAge)
       : super(name: manName, age: manAge) {}
@@ -39,4 +40,10 @@ class Men extends Human {
     print("Sleep!");
     print("work");
   }
+}
+
+class Women extends Human {
+  String gender = "Female Default";
+  Women(this.gender, String womanName, int womanAge)
+      : super(name: womanName, age: womanAge) {}
 }
