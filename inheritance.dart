@@ -1,6 +1,7 @@
 void main(List<String> args) {
   Men men = Men("Male", "Fawad", 30);
   men.dayWork();
+  Human().dayWork();
   print(men.gender);
   print(men.age);
   print(men.name);
