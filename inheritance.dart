@@ -1,6 +1,6 @@
 void main(List<String> args) {
   Men men = Men("Male", "Fawad", 30);
-
+  men.dayWork();
   print(men.gender);
   print(men.age);
   print(men.name);
@@ -12,6 +12,12 @@ class Human {
 
   Human({this.name = "", this.age = 10}) {
     print("Hello from the Human");
+  }
+
+  dayWork() {
+    print("Eat");
+    print("Sleep");
+    print("Servive");
   }
 }
 
