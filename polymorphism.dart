@@ -30,7 +30,7 @@ class Men extends Human {
   @override
   dayWork() {
     print("Eat!");
-    print("Sleep");
+    print("Sleep!");
     print("work");
   }
 }
