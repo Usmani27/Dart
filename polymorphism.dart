@@ -7,6 +7,12 @@ void main(List<String> args) {
   print(men.gender);
   print(men.age);
   print(men.name);
+  print("***Class as Type instance as Parameter and Argument***");
+  dayJob(men); //men instance as an argument
+}
+
+dayJob(Men instanceAsParameter) {
+  instanceAsParameter.dayWork();
 }
 
 class Human {
