@@ -29,7 +29,7 @@ class Men extends Human {
       : super(name: manName, age: manAge) {}
   @override
   dayWork() {
-    print("Eat");
+    print("Eat!");
     print("Sleep");
     print("work");
   }
