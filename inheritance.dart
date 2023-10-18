@@ -30,7 +30,8 @@ class Men extends Human {
   }
   @override
   dayWork() {
-    // TODO: implement dayWork
-    return super.dayWork();
+    print("Eat");
+    print("Sleep");
+    print("work");
   }
 }
