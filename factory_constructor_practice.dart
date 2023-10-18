@@ -1,46 +1,80 @@
 void main() {
-  // create Shape object
-  Shape shape = Shape(ShapeType.circle);
-  Shape shape2 = Shape(ShapeType.rectangle);
-  shape.draw();
-  shape2.draw();
+  final person1 = Person('John');
+  final person2 = Person('Harry');
+  final person3 = Person('John');
+
+  // hashcode of person1 and person3 are same
+  print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
+  print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
+  print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
 }
 
-// enum ShapeType
-enum ShapeType { circle, rectangle }
+class Person {
+  // final fields
+  final String name;
 
-// abstract class Shape
-abstract class Shape {
+  // private constructor
+  Person._internal(this.name);
+
+  // static _cache field
+  static final Map<String, Person> _cache = <String, Person>{};
+
   // factory constructor
-  factory Shape(ShapeType type) {
-    switch (type) {
-      case ShapeType.circle:
-        return Circle();
-      case ShapeType.rectangle:
-        return Rectangle();
-      default:
-        throw 'Invalid shape type';
+  factory Person(String name) {
+    if (_cache.containsKey(name)) {
+      return _cache[name]!;
+    } else {
+      final person = Person._internal(name);
+      _cache[name] = person;
+      return person;
     }
   }
-  // method
-  void draw();
 }
 
-class Circle implements Shape {
-  // implement draw method
-  @override
-  void draw() {
-    print('Drawing circle');
-  }
-}
 
-class Rectangle implements Shape {
-  // implement draw method
-  @override
-  void draw() {
-    print('Drawing rectangle');
-  }
-}
+// void main() {
+//   // create Shape object
+//   Shape shape = Shape(ShapeType.circle);
+//   Shape shape2 = Shape(ShapeType.rectangle);
+//   shape.draw();
+//   shape2.draw();
+// }
+
+// // enum ShapeType
+// enum ShapeType { circle, rectangle }
+
+// // abstract class Shape
+// abstract class Shape {
+//   // factory constructor
+//   factory Shape(ShapeType type) {
+//     switch (type) {
+//       case ShapeType.circle:
+//         return Circle();
+//       case ShapeType.rectangle:
+//         return Rectangle();
+//       default:
+//         throw 'Invalid shape type';
+//     }
+//   }
+//   // method
+//   void draw();
+// }
+
+// class Circle implements Shape {
+//   // implement draw method
+//   @override
+//   void draw() {
+//     print('Drawing circle');
+//   }
+// }
+
+// class Rectangle implements Shape {
+//   // implement draw method
+//   @override
+//   void draw() {
+//     print('Drawing rectangle');
+//   }
+// }
 
 
 //This the 3rd Example
