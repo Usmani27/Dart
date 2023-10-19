@@ -6,6 +6,8 @@ void main(List<String> args) {
     SportsMan managerAsSportsman = manager as SportsMan;
     managerAsSportsman.play();
   }
+  print("***Type Casting Short Cut Way***");
+  (manager as SportsMan).play();
 }
 
 abstract class Education {
