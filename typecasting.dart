@@ -1,6 +1,9 @@
 void main(List<String> args) {
   Human manager = Manager();
   print(manager.eating());
+  if (manager is SportsMan) {
+    manager.play();
+  }
 }
 
 abstract class Education {
@@ -10,7 +13,7 @@ abstract class Education {
   }
 }
 
-abstract class Sports {
+abstract class SportsMan {
   play();
 }
 
@@ -24,7 +27,7 @@ abstract class Human {
   }
 }
 
-class Employee extends Human implements Sports, Education {
+class Employee extends Human implements SportsMan, Education {
   String employeeId = '';
   @override
   play() {
@@ -51,3 +54,9 @@ class Manager extends Employee {
     super.work();
   }
 }
+
+// "We can use two different classes to instantiate an object. We can use abstract 
+// as type and another class to instantiate the object. The newly created instance 
+// can access only the ojects of the class wich was used as type like Human here. 
+// The manager instance can only access the behaviors and methods of Human class 
+// but can't acces Manager class object."
