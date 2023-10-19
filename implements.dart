@@ -20,6 +20,28 @@ class Employee {
   }
 }
 
-class ExtendsandImplements extends Human implements Education Employee{
-  
+class ExtendsandImplements extends Human implements Education, Employee {
+  @override
+  read() {
+    // TODO: implement read
+    throw UnimplementedError();
+  }
+
+  @override
+  study() {
+    // TODO: implement study
+    throw UnimplementedError();
+  }
+
+  @override
+  work() {
+    // TODO: implement work
+    throw UnimplementedError();
+  }
+
+  @override
+  job() {
+    // TODO: implement job
+    throw UnimplementedError();
+  }
 }
