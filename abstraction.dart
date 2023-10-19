@@ -12,3 +12,7 @@ abstract class Test {
     print("Testing");
   }
 }
+
+abstract class NormalClass extends Test {}
+
+class ChildOfNormalClass extends NormalClass {}
