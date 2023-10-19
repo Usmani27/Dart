@@ -1,8 +1,10 @@
 void main(List<String> args) {
   Human manager = Manager();
+
   print(manager.eating());
   if (manager is SportsMan) {
-    manager.play();
+    SportsMan managerAsSportsman = manager as SportsMan;
+    managerAsSportsman.play();
   }
 }
 
@@ -31,7 +33,7 @@ class Employee extends Human implements SportsMan, Education {
   String employeeId = '';
   @override
   play() {
-    throw UnimplementedError();
+    print("Employee likes to play");
   }
 
   @override
