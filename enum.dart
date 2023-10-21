@@ -12,6 +12,7 @@ class GenderType {
 
 void main(List<String> args) {
   GenderType gendertype = GenderType("Amir", 30, Gender.Male);
+  print(gendertype.gender);
 }
 
 
