@@ -1,6 +1,11 @@
 void main(List<String> args) {
   var dog = Dog("My Dog Onyx", 25.5);
   dog.run();
+
+  Animal animalDog = Dog("A polymorphic dog", 50.5);
+
+  print(animalDog.name);
+  print(animalDog.speed);
 }
 
 abstract class Animal {
