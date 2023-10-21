@@ -1,11 +1,31 @@
-enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }
+void main(List<String> args) {
+  CompanyType soleproPritership = CompanyType.soleproPritership;
+  print("***Const Generative Enum Constructor to have String Enum Values***");
+  print(soleproPritership.text);
 
-void main() {
-  // Days.values: It returns all the values of the enum.
-  for (Days day in Days.values) {
-    print(day);
-  }
+  String enumVal = soleproPritership.text;
+  print(enumVal);
 }
+
+enum CompanyType {
+  soleproPritership("Sole Propritership"),
+  partnership("Partnership"),
+  corporaton("Corporaton"),
+  limitedLiabilityCompany("Limited Liability Company");
+
+  final String text;
+  const CompanyType(this.text);
+}
+
+
+// enum Days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }
+
+// void main() {
+//   // Days.values: It returns all the values of the enum.
+//   for (Days day in Days.values) {
+//     print(day);
+//   }
+// }
 
 // void main(List<String> args) {
 //   Image().pick(PickSource.camra);
