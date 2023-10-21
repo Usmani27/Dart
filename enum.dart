@@ -24,6 +24,10 @@ class Image {
       type = 'gallary';
       print("Enum type to String Type: $type");
     }
+    //*******Enum.values for 'for in loop'**** */
+    for (PickSource abc in PickSource.values) {
+      print(abc);
+    }
   }
 }
 
