@@ -9,6 +9,7 @@ void main(List<String> args) {
   } catch (e) {
     print("This the runtime error ${e.runtimeType}");
   }
+  print("This line is outside of the try and catch");
 }
 
 
