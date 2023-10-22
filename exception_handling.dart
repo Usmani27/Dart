@@ -5,7 +5,7 @@ void main(List<String> args) {
   try {
     print(friends[10]);
   } on RangeError catch (e) {
-    print(e.runtimeType);
+    print(e.message);
   } catch (e) {
     print("This the runtime error ${e.runtimeType}");
   }
