@@ -4,8 +4,10 @@ void main(List<String> args) {
   List<String> friends = ["Amir", "Ali"];
   try {
     print(friends[10]);
+  } on RangeError catch (e) {
+    print(e.runtimeType);
   } catch (e) {
-    print("Here is the ERROR $e");
+    print("This the runtime error ${e.runtimeType}");
   }
 }
 
