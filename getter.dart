@@ -1,11 +1,17 @@
 class Book {
-  String? _name;
-  int? _prize;
+  String _name;
+  int _prize;
 
   Book(this._name, this._prize);
 
-  String get name => this._name!;
-  int get prize => this._prize!;
+  String get name {
+    if (_name == "") {
+      return ("No Name");
+    }
+    return this._name;
+  }
+
+  int get prize => this._prize;
 }
 
 class Person {
@@ -18,7 +24,7 @@ class Person {
 }
 
 void main(List<String> args) {
-  Book book = Book("Kitab", 50);
+  Book book = Book("", 10);
   print(book.name);
   print(book.prize);
 
