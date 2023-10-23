@@ -1,5 +1,6 @@
 class Contact {
   String _email = "";
+  String _name = "";
 
   set setEmail(email) {
     if (email.contains("@") && email.contains("ku.edu")) {
@@ -12,10 +13,20 @@ class Contact {
   }
 
   String get getEmail => this._email;
+  String get getName => this._name;
+
+  set setName(name) => this._name = name;
 }
 
 void main(List<String> args) {
   Contact contact = Contact();
-  contact.setEmail = "email@au.edu";
+  try {
+    contact.setEmail = "email@kau.edu";
+  } catch (e) {
+    print(e);
+  }
   print(contact.getEmail);
+
+  contact.setName = "Joe";
+  print(contact.getName);
 }
