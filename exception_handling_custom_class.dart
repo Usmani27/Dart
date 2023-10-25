@@ -47,6 +47,9 @@ void main(List<String> args) {
     print("The message is from Mobile_Excepton ${e.message}");
   } catch (e) {
     print(e);
+  } finally {
+    print('********************');
+    print('Finally will print in any case');
   }
 
   print(contact.getEmail);
